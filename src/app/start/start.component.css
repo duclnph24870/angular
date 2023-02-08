@@ -1,0 +1,15 @@
+.start-container {
+    width: calc(var(--width) * 20);
+    max-width: 100px;
+    overflow-x: hidden;
+}
+
+.start-block {
+    width: 20px;
+}
+
+.start-block i {
+    color: #ffc000;
+    width: 100%;
+    font-size: 18px;
+}

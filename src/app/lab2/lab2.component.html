@@ -1,0 +1,30 @@
+<h1>Bài 1</h1>
+<h3 class="my-2">Product list</h3>
+<div class="filter-header">
+    <span>Filter: </span>
+    <input type="text" (input)="handleFilter()" [(ngModel)]="filterValue">
+</div>
+<h1 class="title my-3">Filter By</h1>
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Image</th>
+        <th scope="col">Product</th>
+        <th scope="col">Code</th>
+        <th scope="col">Avaliable</th>
+        <th scope="col">Price</th>
+        <th scope="col">Start</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of data">
+        <td><img class="product-image" src={{item.imageUrl}} alt=""></td>
+        <td>{{item.productName}}</td>
+        <td>{{item.productCode}}</td>
+        <td>{{item.releaseDate}}</td>
+        <td>{{item.price}}</td>
+        <td><app-start [rating]="item.starRating"></app-start></td>
+      </tr>
+    </tbody>
+  </table>
+
